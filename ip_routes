@@ -1,0 +1,24 @@
+#routes
+
+/ip route
+add distance=1 gateway=10.240.4.1 routing-mark=to_wan4
+add bgp-as-path="" distance=1 gateway=10.240.8.1 routing-mark=to_wan8
+add distance=1 gateway=10.240.5.1 routing-mark=to_wan5
+add distance=1 gateway=10.240.6.1 routing-mark=to_wan6
+add distance=1 gateway=10.240.1.1 routing-mark=to_wan1
+add distance=1 gateway=ether1-WAN1 routing-mark=to_wan1
+add distance=1 gateway=10.240.2.1 routing-mark=to_wan2
+add distance=1 gateway=10.240.3.1 routing-mark=to_wan3
+add distance=1 gateway=10.240.7.1 routing-mark=to_wan7
+add check-gateway=ping distance=1 gateway=10.240.6.1,10.240.2.1,10.240.3.1,10.240.4.1,10.240.5.1,10.240.7.1,10.240.8.1
+add check-gateway=ping distance=1 dst-address=1.1.1.1/32 gateway=10.240.1.1
+add check-gateway=ping distance=1 dst-address=1.1.1.1/32 gateway=10.240.2.1
+add check-gateway=ping distance=1 dst-address=8.8.4.4/32 gateway=10.240.4.1
+add check-gateway=ping distance=1 dst-address=8.8.8.8/32 gateway=10.240.3.1
+add check-gateway=ping distance=1 dst-address=8.20.247.20/32 gateway=10.240.8.1 scope=10
+add check-gateway=ping distance=1 dst-address=8.20.247.20/32 gateway=ether8-WAN8
+add check-gateway=ping distance=1 dst-address=8.26.56.26/32 gateway=10.240.7.1
+add check-gateway=ping distance=1 dst-address=10.240.1.1/32 gateway=ether1-WAN1
+add distance=1 dst-address=192.168.0.0/24 gateway=InterfaceLAN
+add check-gateway=ping distance=1 dst-address=209.244.0.3/32 gateway=10.240.5.1
+add check-gateway=ping distance=1 dst-address=209.244.0.4/32 gateway=10.240.6.1
