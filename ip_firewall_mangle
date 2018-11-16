@@ -1,0 +1,18 @@
+/ip firewall mangle
+
+add action=mark-connection chain=input in-interface=ether6-WAN6 new-connection-mark=wan6_conn passthrough=no
+add action=mark-routing chain=output connection-mark=wan6_conn new-routing-mark=to_wan6 passthrough=no
+add action=mark-connection chain=input in-interface=ether1-WAN1 new-connection-mark=wan1_conn passthrough=no
+add action=mark-routing chain=output connection-mark=wan1_conn new-routing-mark=to_wan1 passthrough=no
+add action=mark-connection chain=input in-interface=ether2-WAN2 new-connection-mark=wan2_conn passthrough=no
+add action=mark-routing chain=output connection-mark=wan2_conn new-routing-mark=to_wan2 passthrough=no
+add action=mark-connection chain=input in-interface=ether3-WAN3 new-connection-mark=wan3_conn passthrough=no
+add action=mark-routing chain=output connection-mark=wan3_conn new-routing-mark=to_wan3 passthrough=no
+add action=mark-connection chain=input in-interface=ether4-WAN4 new-connection-mark=wan4_conn passthrough=no
+add action=mark-routing chain=output connection-mark=wan4_conn new-routing-mark=to_wan4 passthrough=no
+add action=mark-connection chain=input in-interface=ether5-WAN5 new-connection-mark=wan5_conn passthrough=no
+add action=mark-routing chain=output connection-mark=wan5_conn new-routing-mark=to_wan5 passthrough=no
+add action=mark-connection chain=input in-interface=ether7-WAN7 new-connection-mark=wan7_conn passthrough=no
+add action=mark-routing chain=output connection-mark=wan7_conn new-routing-mark=to_wan7 passthrough=no
+add action=mark-connection chain=input in-interface=ether8-WAN8 new-connection-mark=wan8_conn passthrough=no
+add action=mark-routing chain=output connection-mark=wan8_conn new-routing-mark=to_wan8 passthrough=no
