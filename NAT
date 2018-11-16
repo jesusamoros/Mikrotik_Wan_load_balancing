@@ -1,0 +1,9 @@
+/ip firewall nat
+add action=masquerade chain=srcnat out-interface=ether6-WAN6
+add action=masquerade chain=srcnat out-interface=ether1-WAN1
+add action=masquerade chain=srcnat out-interface=ether2-WAN2
+add action=masquerade chain=srcnat out-interface=ether3-WAN3
+add action=masquerade chain=srcnat out-interface=ether4-WAN4
+add action=masquerade chain=srcnat out-interface=ether5-WAN5
+add action=masquerade chain=srcnat out-interface=ether7-WAN7
+add action=masquerade chain=srcnat out-interface=ether8-WAN8
