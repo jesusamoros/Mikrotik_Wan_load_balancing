@@ -1,0 +1,60 @@
+name="check_WANS_final" owner="admin" policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon dont-require-permissions=no last-started=nov/16/2018 09:08:20 run-count=8085 
+     source=
+       :if ([/interface get [/interface find name="ether8-WAN8"] running] = true) do={
+           :if ([/ping 208.67.222.222 count=5 interface=ether8-WAN8] = 0) do={
+           /interface disable ether8-WAN8
+           /tool e-mail send to="soporte@mail.com" cc="noc@mail.com"  subject="wan caida" body="Hola, este es un mensaje de alerta del Mikrotik1, revisar el router conectado a la interfaz ether8-WAN8  WAN  CAIDA  \nDONDE:SITE>
+           /tool e-mail send to="youremail@mail.com" cc="yourmail@mail.com" subject="wan caida" body="interfaz ether8-WAN8  WAN mail.comstart-tls=yes
+           }
+           }
+       
+       
+       
+       :if ([/interface get [/interface find name="ether7-WAN7"] running] = true) do={
+           :if ([/ping 208.67.220.220 count=5 interface=ether7-WAN7] = 0) do={
+           /interface disable ether7-WAN7
+           /tool e-mail send to="soporte@mail.com" cc="noc@mail.com"  subject="wan caida" body="Hola, este es un mensaje de alerta del Mikrotik1, revisar el router conectado a la interfaz ether7-WAN7  WAN  CAIDA  \nDONDE:SITE>
+           /tool e-mail send to="youremail@mail.com" cc="yourmail@mail.com" subject="wan caida" body="interfaz ether7-WAN7  WAN mail.comstart-tls=yes
+           }
+           }
+       
+           :if ([/interface get [/interface find name="ether6-WAN6"] running] = true) do={
+           :if ([/ping 8.8.8.8 count=5 interface=ether6-WAN6] = 0) do={
+           /interface disable ether6-WAN6
+           /tool e-mail send to="soporte@mail.com" cc="noc@mail.com"  subject="wan caida" body="Hola, este es un mensaje de alerta del Mikrotik1, revisar el router conectado a la interfaz ether6-WAN6  WAN  CAIDA  \nDONDE:SITE>
+           /tool e-mail send to="youremail@mail.com" cc="yourmail@mail.com" subject="wan caida" body="interfaz ether6-WAN6  WAN mail.comstart-tls=yes
+           }
+           }
+       
+           :if ([/interface get [/interface find name="ether5-WAN5"] running] = true) do={
+           :if ([/ping 8.8.4.4 count=5 interface=ether5-WAN5] = 0) do={
+           /interface disable ether5-WAN5
+           /tool e-mail send to="soporte@mail.com" cc="noc@mail.com"  subject="wan caida" body="Hola, este es un mensaje de alerta del Mikrotik1, revisar el router conectado a la interfaz ether5-WAN5  WAN  CAIDA  \nDONDE:SITE>
+           /tool e-mail send to="youremail@mail.com" cc="yourmail@mail.com" subject="wan caida" body="interfaz ether5-WAN5  WAN mail.comstart-tls=yes
+           }
+           }
+       
+           :if ([/interface get [/interface find name="ether4-WAN4"] running] = true) do={
+           :if ([/ping 9.9.9.9 count=5 interface=ether4-WAN4] = 0) do={
+           /interface disable ether4-WAN4
+           /tool e-mail send to="soporte@mail.com" cc="noc@mail.com"  subject="wan caida" body="Hola, este es un mensaje de alerta del Mikrotik1, revisar el router conectado a la interfaz ether4-WAN4  WAN  CAIDA  \nDONDE:SITE>
+           /tool e-mail send to="youremail@mail.com" cc="yourmail@mail.com" subject="wan caida" body="interfaz ether4-WAN4  WAN mail.comstart-tls=yes
+           }
+           }
+       
+           :if ([/interface get [/interface find name="ether3-WAN3"] running] = true) do={
+           :if ([/ping 9.9.9.9 count=5 interface=ether3-WAN3] = 0) do={
+           /interface disable ether3-WAN3
+           /tool e-mail send to="soporte@mail.com" cc="noc@mail.com"  subject="wan caida" body="Hola, este es un mensaje de alerta del Mikrotik1, revisar el router conectado a la interfaz ether3-WAN3  WAN  CAIDA  \nDONDE:SITE>
+           /tool e-mail send to="youremail@mail.com" cc="yourmail@mail.com" subject="wan caida" body="interfaz ether3-WAN3  WAN mail.comstart-tls=yes
+           }
+           }
+       
+           :if ([/interface get [/interface find name="ether2-WAN2"] running] = true) do={
+           :if ([/ping 1.1.1.1 count=5 interface=ether2-WAN2] = 0) do={ 
+           /interface disable ether2-WAN2
+           /tool e-mail send to="soporte@mail.com" cc="noc@mail.com"  subject="wan caida" body="Hola, este es un mensaje de alerta del Mikrotik1, revisar el router conectado a la interfaz ether2-WAN2  WAN  CAIDA  \nDONDE:SITE>
+           /tool e-mail send to="youremail@mail.com" cc="yourmail@mail.com"  subject="wan caida" body="interfaz ether2-WAN2  WAN mail.comstart-tls=yes
+           }
+           }
+
